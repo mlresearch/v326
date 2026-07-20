@@ -1,0 +1,239 @@
+@Proceedings{gram26,
+    booktitle = {Proceedings of GRaM: the Second Edition of the Workshop on Geometry-grounded Representation Learning and Generative Modeling},
+    name = {Geometry-grounded Representation Learning and Generative Modeling Workshop (GRaM) at ICLR 2026},
+    shortname = {GRaM Workshop},
+    editor = {Pouplin, Alison and Vadgama, Sharvaree and Bekkers, Erik and Kaba, S\'ekou-Oumar and Lawrence, Hannah and Lecha, Manuel and Baker, Elizabeth and Suk, Julian and Walters, Robin and Tomczak, Jakub and Jegelka, Stefanie},
+    volume = {326},
+    year = {2026},
+    start = {2026-04-26},
+    end = {2026-04-26},
+    published = {2026-07-20},
+    conference_url = {https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM},
+    address = {Riocentro Convention and Event Center, Rio de Janeiro, Brazil},
+    conference_number = {2}
+}
+
+@InProceedings{pouplin26,
+    pages      = {1-4},
+    title      = {Preface to GRaM: the Second Workshop on Geometry-grounded Representation Learning and Generative Modeling},
+    author     = {Pouplin, Alison and Vadgama, Sharvaree and Bekkers, Erik and Kaba, S\'ekou-Oumar and Lawrence, Hannah and Lecha, Manuel and Baker, Elizabeth and Suk, Julian and Walters, Robin and Tomczak, Jakub and Jegelka, Stefanie},
+    abstract   = {This second edition of GRaM, the workshop on Geometry-grounded Representation Learning and Generative Modeling, was held at ICLR 2026 in Rio de Janeiro. GRaM is built on the principle of grounding in geometry --- that machine learning models should respect the geometric structure of their data, from symmetries and manifolds to graphs and non-Euclidean spaces, rather than treat their inputs as plain vectors. This year we asked whether such structure holds up under the theme scale and simplicity.},
+}
+
+@InProceedings{ali26,
+    pages      = {5-31},
+    title      = {Algebraic Priors for Approximately Equivariant Networks},
+    author     = {Ali, Riccardo and Li\`{o}, Pietro and Vicary, Jamie},
+    abstract   = {Equivariant neural networks incorporate symmetries through group actions, embedding them as an inductive bias to improve performance. Existing methods learn an equivariant action on the latent space, or design architectures that are equivariant by construction. These approaches often deliver strong empirical results but can involve architecture-specific constraints, large parameter counts, and high computational cost. We challenge the paradigm of complex equivariant architectures with a parameter-free approach grounded in group representation theory. We prove that for an equivariant encoder over a finite group, the latent space must almost surely contain one copy of its regular representation for each linearly independent data orbit, which we explore with a number of empirical studies. Leveraging this foundational algebraic insight, we impose the group's regular representation as an inductive bias via an auxiliary loss, adding no learnable parameters. Our extensive evaluation shows that this method matches or outperforms specialized models in several cases, even those for infinite groups. We further validate our choice of the regular representation through an ablation study, showing it consistently outperforms defining and trivial group representation baselines.},
+    openreview = {4ig6Rj4aio},
+    software   = {https://github.com/rick-ali/parameter-free-approximate-equivariance},
+}
+
+@InProceedings{baheri26,
+    pages      = {32-44},
+    title      = {{G}eometry-{G}rounded {F}low {M}atching on {C}ompact {M}anifolds},
+    author     = {Baheri, Ali},
+    abstract   = {Riemannian Flow Matching extends Flow Matching generative modeling to data that lives on curved spaces such as spheres and tori by learning a time-dependent vector field and generating samples through ordinary differential equation integration. This paper provides an end-to-end theoretical guaranty for the standard Riemannian Flow Matching pipeline on compact manifolds. Our analysis separates three sources of error: the statistical error from learning the conditional-mean velocity field produced by conditional flow matching, the approximation and optimization error arising from the chosen function class and empirical risk minimization, and the discretization error introduced by the numerical ODE solver. A key technical contribution is a flow-to-distribution stability result that is robust to geometry: curvature and injectivity radius influence only constants under standard boundedness and Lipschitz regularity conditions. Under metric-entropy assumptions, the learning rate is governed by the intrinsic manifold dimension rather than any ambient embedding dimension. Experiments on the circle, the sphere, and the two-torus support the predicted scaling behavior.},
+    openreview = {VTaO5BXDxV}
+}
+
+@InProceedings{bird26,
+    pages      = {45-74},
+    title      = {{T}he {A}ffine {D}ivergence: {A}ligning {A}ctivation {U}pdates {B}eyond {N}ormalisation},
+    author     = {Bird, George},
+    abstract   = {A systematic mismatch exists between mathematically ideal and effective activation updates during gradient descent. As intended, parameters update in their direction of steepest descent. However, activations are argued to constitute a more directly impactful quantity to prioritise in optimisation, as they are closer to the loss in the computational graph and carry sample-dependent information through the network. Yet their propagated updates do not take the optimal steepest-descent step. These quantities exhibit non-ideal sample-wise scaling across affine, convolutional, and attention layers. Solutions to correct for this are trivial and, incidentally, derive normalisation from first principles despite motivational independence. Consequently, such considerations offer a fresh, conceptual reframe of normalisation's action, with auxiliary experiments bolstering this mechanistic interpretation. Moreover, this analysis makes clear a second possibility: a solution that is functionally distinct from modern normalisations, without scale invariance, yet remains empirically successful --- an alternative to the affine map. This outperforms conventional normalisers across several tests. This generalises to convolution via a new functional form, ``PatchNorm'', a compositionally inseparable normaliser. Together, these provide an alternative mechanistic framework that both adds to and counters some of the discussion of normalisation. Further, it is argued that normalisers are better decomposed into activation-function-like maps with parameterised scaling. Overall, this constitutes a theoretically principled approach that yields new functions with empirical validation and raises questions about the affine + nonlinear approach.},
+    openreview = {KKQSwSpfJ1},
+}
+
+@InProceedings{carrasco26,
+    pages      = {75-87},
+    title      = {{P}awsterior: {V}ariational {F}low {M}atching for {S}tructured {S}imulation-{B}ased {I}nference},
+    author     = {Carrasco-Pollo, Jorge and Eijkelboom, Floor and van de Meent, Jan-Willem},
+    abstract   = {We introduce Pawsterior, a variational flow-matching framework for improved and extended simulation-based inference (SBI). Many SBI problems involve posteriors constrained by structured domains---such as bounded physical parameters or hybrid discrete--continuous variables---yet standard flow-matching methods typically operate in unconstrained spaces. This mismatch leads to inefficient learning and difficulty respecting physical constraints. Our contributions are twofold. First, generalizing the geometric inductive bias of CatFlow, we formalize endpoint-induced affine geometric confinement, a principle that incorporates domain geometry directly into the inference process via a two-sided variational model. This formulation improves numerical stability during sampling and leads to consistently better posterior fidelity, as demonstrated by improved classifier two-sample test performance across standard SBI benchmarks. Second, and more importantly, our variational parameterization enables SBI tasks involving discrete latent structure (e.g., switching systems) that are fundamentally incompatible with conventional flow-matching approaches. By addressing both geometric constraints and discrete latent structure, Pawsterior provides a principled way to apply flow-matching in a broader range of structured SBI settings.},
+    openreview = {QeiyEvdyVq},
+    software   = {https://github.com/Carrask0/pawsterior},
+}
+
+@InProceedings{chincholikar26,
+    pages      = {88-108},
+    title      = {{T}owards {T}ext-Line {S}egmentation of {H}istorical {D}ocuments Using {G}raph {N}eural {N}etworks},
+    author     = {Chincholikar, Kartik and Gopalan, Kaushik and Hasabnis, Mihir},
+    abstract   = {We present an initial investigation into a graph-based problem formulation for performing text-line segmentation of historical documents, by representing characters (or grapheme clusters) as the nodes, and with edges connecting characters to their previous and next characters on the text-line. This converts the image segmentation learning task into a binary edge classification learning task. This also enables training on large-scale synthetic data simulating complex layouts, enabling better robustness to Layout-level distribution shifts observed in historical documents. Furthermore, we introduce a benchmark dataset of 15 Sanskrit manuscripts with diverse layouts. We propose a method based on CRAFT and Graph Neural Networks (GNNs), which uses geometric priors of text-lines to perform competitively with leading approaches in zero-shot and few-shot experimental settings on the Sanskrit dataset introduced and the U-DIADS-TL dataset. The proposed method further demonstrates competitive accuracy and better consistency than leading methods Doc-UFCN and SeamFormer when evaluating robustness to distribution shifts over increasing data sizes (using intra-manuscript and inter-manuscript train-test data splits) on the Sanskrit dataset introduced and the DIVA-HisDB dataset. Finally, we demonstrate that the proposed method achieves strong performance in the downstream, goal-oriented evaluation of text recognized from the segmented text-lines. The dataset, training, and inference code is available at: https://github.com/flame-cai/gnn-synthetic-layout-historical/tree/gram-submission},
+    openreview = {0GoutqIh3l},
+    software   = {https://github.com/flame-cai/gnn-synthetic-layout-historical}
+}
+
+@InProceedings{dantas26,
+    pages      = {109-134},
+    title      = {Neurodiversity Meets Colors: Does Position Awareness Destroy Generalization in Brain Graph Learning?},
+    author     = {Angelo Pereira Dantas, Matheo and Graziani, Caterina and Sampaio Ferraz Ribeiro, Leo and Carvalho, Andre Carlos Ponce de Leon Ferreira De},
+    abstract   = {Graph Neural Networks (GNNs) rely on permutation invariance to exploit symmetries in graph data using principles of Geometric Deep Learning. However, in machine learning models that process fMRI data using a brain atlas, each node corresponds to a region with its own position and neurological function. Thus, permutation invariance would make the model unaware of these aspects, causing a significant loss of biological interpretability and predictive information. For this reason, many GNN architectures opt for assigning each ROI ("Region Of Interest" in the brain) a unique node representation, either explicitly or implicitly through feature engineering, before using the graph as input for the GNN. In this theoretical study, we investigate the consequences of that choice. First, we prove that, if each ROI is explicitly identified with a unique color, it is possible to achieve perfect expressivity using a GNN with a single max-aggregation message-passing layer, which suffices to attain the maximal Rademacher complexity and very loose VC dimension's bounds. Building on that, we derive generalization bounds based on concrete parameters of the model, such as ROI embedding dimension and atlas size, revealing ways in which this tradeoff could manifest in practice. These findings are particularly relevant in the context of fMRI graph learning, where, despite severe struggles with overfitting and data scarcity, generalization theory is still underexplored.},
+    openreview = {ZNPbn4qp4g},
+}
+
+@InProceedings{dats26,
+    pages      = {135-144},
+    title      = {On the Geometry of Analogical Reasoning in Latent Space},
+    author     = {Dats, Oleg},
+    abstract   = {Analogical reasoning is the ability to infer and apply a consistent relation across examples. This ability imposes a simple geometric constraint: example pairs should differ by a shared displacement in representation space. Yet most neural architectures do not enforce this structure explicitly, instead relying on implicit attention-based mechanisms. We study analogical reasoning from a geometric perspective and show that it can be realized by a minimal latent-space translation structure. We instantiate this principle with an Encoder--Reasoner--Decoder (ERD) architecture, where each example pair defines a latent difference vector and a task-level transformation is obtained by averaging these differences, corresponding to the least-squares solution of a shared linear relation. Using the Abstraction and Reasoning Corpus (ARC) as a diagnostic benchmark, we show that explicitly enforcing this geometric constraint improves generalization relative to implicit attention-based reasoning approaches, while reducing computation from quadratic to linear in the number of examples. The learned representations exhibit clear geometric structure: difference vectors cluster by task and form consistent parallelogram relations, providing direct evidence of explicit analogical geometry. These results suggest that analogical reasoning does not require complex symbolic machinery, large-scale attention, or auxiliary training losses, but can emerge from enforcing a simple and interpretable geometric structure in latent space.},
+    openreview = {806HUH0uQn},
+    software   = {https://github.com/odats/arc_erd},
+}
+
+@InProceedings{deschouwer26,
+    pages      = {145-183},
+    title      = {k-{M}aximum {I}nner {P}roduct {A}ttention for {G}raph {T}ransformers and the {E}xpressive {P}ower of {G}raphGPS},
+    author     = {De Schouwer, Jonas and S\'{a}ez de Oc\'{a}riz Borde, Haitz and Dong, Xiaowen},
+    abstract   = {Graph transformers have shown promise in overcoming limitations of traditional graph neural networks, such as oversquashing and difficulties in modelling longrange dependencies. However, their application to large-scale graphs is hindered by the quadratic memory and computational complexity of the all-to-all attention mechanism. Although alternatives such as linearized attention and restricted attention patterns have been proposed, these often degrade performance or limit expressive power. To better balance efficiency and effectiveness, we introduce k-Maximum Inner Product (k-MIP) attention for graph transformers. k-MIP attention selects the most relevant key nodes per query via a top-k operation, yielding a sparse yet flexible attention pattern. Combined with an attention score computation based on symbolic matrices, this results in linear memory complexity and practical speedups of up to an order of magnitude compared to all-to-all attention, enabling the processing of graphs with over 500k nodes on a single A100 GPU. We provide a theoretical analysis of expressive power, showing that k-MIP attention does not compromise the expressiveness of graph transformers: specifically, we prove that k-MIP transformers can approximate any full-attention transformer to arbitrary precision. In addition, we analyze the expressive power of the GraphGPS framework, in which we integrate our attention mechanism, and establish an upper bound on its graph distinguishing capability in terms of the S-SEG-WL test. Finally, we validate our approach on the Long Range Graph Benchmark, the City-Networks benchmark, and two custom large-scale inductive point cloud datasets, consistently ranking among the top-performing scalable graph transformers.},
+    openreview = {4Y5kxbH2fI},
+    software   = {https://github.com/JonasDeSchouwer/k-MIP-Attention-and-the-Expressive-Power-of-GraphGPS},
+}
+
+@InProceedings{fernandes26,
+    pages      = {184-200},
+    title      = {ReCycle Net: Cycle-Aware, Feature-Free GNN For Community Detection},
+    author     = {Fernandes, Caleb and Moradi Jamei, Behnaz},
+    abstract   = {Community detection is a fundamental problem in network science, yet classical methods suffer from resolution limits and limited adaptability, while many Graph Neural Networks (GNNs) do not explicitly model higher-order cyclic structures that underlie real-world communities. We propose ReCycle Net (RCN), a feature-free, cycle-aware GNN that integrates Renewal Non-Backtracking Random Walk (RNBRW) reinforcement into a GAT-style backbone and is trained with a multi-term unsupervised objective combining modularity, Laplacian smoothness, contrastive consistency, and orthogonality regularization. RCN targets graphs where cyclic closure is structurally informative for community formation and learns embeddings that support unsupervised community recovery. Across standard benchmarks, RCN is competitive with strong baselines (e.g., PolBooks: NMI 0.60, ARI 0.67; Facebook: silhouette 0.85), with its clearest gains appearing on overlapping protein complexes under overlap-aware evaluation (Complex Portal: ONMI 0.344 at r = 2 vs. 0.243, 0.232, and 0.140 for generative overlapping-based, strong attention-based, and modularity-based baselines). On graphs with weaker cyclic closure (e.g., Cora), gains are smaller and RCN remains comparable to standard baselines. Overall, these results suggest that explicitly incorporating cycle-derived structure into GNN learning can be beneficial in cycle-rich regimes while remaining robust outside this setting.},
+    openreview = {sqHwjaCh7y},
+    software   = {https://github.com/Bytb/RCN},
+}
+
+@InProceedings{fraser26,
+    pages      = {201-226},
+    title      = {{S}parse {C}oncept {A}nchoring for Interpretable and Controllable Neural Representations},
+    author     = {Fraser, Sandy and Wielopolski, Patryk},
+    abstract   = {We introduce Sparse Concept Anchoring, a method that biases latent space to position a targeted subset of concepts while allowing others to self-organize, using only minimal supervision (in our setting, labels for less than 0.1\% of examples per anchored concept). Training combines activation normalization, a separation regularizer, and anchor or subspace regularizers that attract rare labeled examples to predefined directions or axis-aligned subspaces. The anchored geometry enables two practical interventions: reversible behavioral steering that projects out a concept's latent component at inference, and permanent removal via targeted weight ablation of anchored dimensions. Experiments on structured autoencoders show selective attenuation of targeted concepts with negligible impact on orthogonal features, and complete elimination with reconstruction error approaching theoretical bounds. Sparse Concept Anchoring therefore provides a practical pathway to interpretable, steerable behavior in learned representations.},
+    openreview = {fCyFNits3s},
+    software   = {https://github.com/z0u/ex-preppy/tree/a91164f},
+}
+
+@InProceedings{gu26,
+    pages      = {227-261},
+    title      = {Laplacian Flows for Policy Learning from Experience},
+    author     = {Gu, Xingrui and Jiang, Chuyi},
+    abstract   = {Many learning and decision-making systems output conditional distributions rather than point predictions, yet are trained via locally ``reasonable'' myopic gradient updates that implicitly assume their composition remains globally stable and feasible. In RL (policy gradient/actor--critic) and LLMs (cross-entropy), drift is typically controlled by KL/Fisher trust regions, which need not reflect the true behavioral scale of policy change, so small per-step moves can accumulate into large transport-scale shifts that break stability, long-horizon evidence integration, and robustness (like a millimeter map error causing a catastrophic fall in physical space). We propose the Policy Laplacian Trace (PLT): retrieved historical policies define an OT-induced local graph, and each update solves a variational OT+KL proximal step coupling a Wasserstein barycenter term with KL regularization, yielding experience-induced Laplacian smoothing of task-gradient drift. Geometrically, PLT connects to Laplace learning in Wasserstein space: its discrete graph energy approximates a $p$-Dirichlet/Laplace--Beltrami energy on the realizable policy subset. Empirically, PLT is plug-and-play and improves PPO/MAPPO stability, sample efficiency, and robustness under controlled shifts, and strengthens LLM-as-policy performance on counterfactual trust, long-range factual recall, and few-shot novel-category learning across GPT-family models, while maintaining or improving base performance and calibration.},
+    openreview = {55FIDiXzvP},
+}
+
+@InProceedings{gulati26,
+    pages      = {262-293},
+    title      = {Mutual Information and Task-Relevant Latent Dimensionality},
+    author     = {Gulati, Paarth and Abdelaleem, Eslam and Sederberg, Audrey and Nemenman, Ilya},
+    abstract   = {Estimating the dimensionality of the latent representation needed for prediction---the task-relevant dimension---is a difficult, largely unsolved problem with broad scientific applications. We cast it as an Information Bottleneck question: what embedding bottleneck dimension is sufficient to compress predictor and predicted views while preserving their mutual information (MI). This repurposes neural MI estimators for dimensionality estimation. We show that standard neural estimators with separable/bilinear critics systematically inflate the inferred dimension, and we address this by introducing a hybrid critic that retains an explicit dimensional bottleneck while allowing flexible nonlinear cross-view interactions, thereby preserving the latent geometry. We further propose a one-shot protocol that reads off the effective dimension from a single over-parameterized hybrid model, without sweeping over bottleneck sizes. We validate the approach on synthetic problems with known task-relevant dimension. We extend the approach to intrinsic dimensionality by constructing paired views of a single dataset, enabling comparison with classical geometric dimension estimators. In noisy regimes where those estimators degrade, our approach remains reliable. Finally, we demonstrate the utility of the method on multiple physics datasets.},
+    openreview = {B2WaoKzIyF},
+    software   = {https://github.com/paarthgulati/dim_est}
+}
+
+@InProceedings{gutteridge26,
+    pages      = {294-320},
+    title      = {{C}an {G}raph {F}oundation {M}odels {G}eneralize {O}ver {A}rchitecture?},
+    author     = {Gutteridge, Benjamin and Bronstein, Michael and Dong, Xiaowen},
+    abstract   = {Graph foundation models (GFMs) have recently attracted interest due to the promise of graph neural network (GNN) architectures that generalize zero-shot across graphs of arbitrary scales, feature dimensions, and domains. While existing work has demonstrated this ability empirically across diverse real-world benchmarks, these tasks share a crucial hidden limitation: they admit a narrow set of effective GNN architectures. In particular, current domain-agnostic GFMs rely on fixed architectural backbones, implicitly assuming that a single message-passing regime suffices across tasks. In this paper, we argue that architecture adaptivity is a necessary requirement for true GFMs. We show that existing approaches are non-robust to task-dependent architectural attributes and, as a case study, use range as a minimal and measurable axis along which this limitation becomes explicit. With theoretical analysis and controlled synthetic experiments, we demonstrate that fixed-backbone GFMs provably under-reach on tasks whose architectural requirements differ from those seen at training time. To address this issue, we introduce a framework that adapts effective GNN architecture at inference time by discovering and mixing task-specific linear graph operators, enabling zero-shot generalization across tasks with heterogeneous architectural requirements, without retraining. We validate our approach on arbitrary-range synthetic tasks and a suite of real-world benchmarks, demonstrating improved performance and robustness over existing domain-agnostic GFMs.},
+    openreview = {wHg1vL9fdO},
+    software   = {https://github.com/BenGutteridge/GOBLIN},
+}
+
+@InProceedings{heile26,
+    pages      = {321-355},
+    title      = {Rigid Invariant Sliced Wasserstein via Independent Embeddings},
+    author     = {Heile, Zakk and He, Peilin and Tran, Jayson and Wang, Alice and Chand, Shrikant},
+    abstract   = {Comparing probability measures modulo unknown rigid transformations is a central challenge in geometric data analysis. Classical optimal transport (OT) distances, including Wasserstein and sliced Wasserstein, are sensitive to rotations and reflections, whereas Gromov-Wasserstein (GW) distances are invariant to isometries but computationally prohibitive for large datasets. We introduce Rigid-Invariant Sliced Wasserstein via Independent Embeddings (RISWIE), a scalable distance that combines the invariance of NP-hard approaches with the efficiency of projection-based OT. RISWIE utilizes data-adaptive bases and matches optimal signed permutations along axes according to distributional similarity to achieve rigid invariance with near-linear complexity in the sample size. We prove bounds relating RISWIE to GW in special cases and demonstrate dimension-independent statistical stability. Our experiments on cellular imaging and 3D human meshes demonstrate that RISWIE outperforms GW in clustering tasks and discriminative capability while significantly reducing runtime.},
+    openreview = {hLG8HynoTk},
+    software   = {https://github.com/zakk-h/RISWIE-Code}
+}
+
+@InProceedings{maji26,
+    pages      = {356-386},
+    title      = {Semantic-Anchored, Class Variance-Optimized Clustering for Robust Semi-Supervised Few-Shot Learning},
+    author     = {Maji, Souvik and Baghel, Rhythm and Mazumder, Pratik},
+    abstract   = {Few-shot learning helps models perform effectively in scenarios with very few labeled samples per class. Semi-supervised FSL enables the use of abundant unlabeled samples, which are cheap to collect and can improve performance. Some of the recent methods for this setting rely on clustering to generate pseudo-labels for the unlabeled samples. Since the effectiveness of clustering heavily influences the labeling of the unlabeled samples, it can significantly affect the few-shot learning performance. In this paper, we focus on improving the representation learned by the model in order to improve the clustering and, consequently, the model performance. We propose an approach for semi-supervised few-shot learning that performs a class-variance optimized clustering coupled with a cluster separation tuner in order to improve the effectiveness of clustering the labeled and unlabeled samples in this setting. It also optimizes the clustering-based pseudo-labeling process using a restricted pseudo-labeling approach and performs semantic information injection in order to improve the semi-supervised few-shot learning performance of the model. Experiments show our method outperforms recent state-of-the-art methods on benchmark datasets and remains robust under domain shifts and open-set settings with distractor classes.},
+    openreview = {JO3YCgQhfn},
+    software   = {https://github.com/majisouvik26/SA-CVOC},
+}
+
+@InProceedings{marques26,
+    pages      = {387-397},
+    title      = {GSVD for Geometry-Grounded Dataset Comparison: An Alignment Angle Is All You Need},
+    author     = {Marques, Eduarda and Sobrinho, Arthur and Paix\~{a}o, Jo\~{a}o and Menasche, Daniel and Mirandola, Heudson},
+    abstract   = {Geometry-grounded learning asks models to respect structure in the problem domain rather than treating observations as arbitrary vectors. Motivated by this view, we revisit a classical but underused primitive for comparing datasets: \emph{linear relations} between two data matrices, expressed via the co-span constraint $Ax=By=z$ in a shared ambient space. To operationalize this comparison, we use the generalized singular value decomposition (GSVD) as a joint coordinate system for two subspaces. In particular, we exploit the GSVD form $A = H C U$, $B = H S V$ with $C^\top C + S^\top S = I$, which separates shared versus dataset-specific directions through the diagonal structure of $(C,S)$. From these factors we derive an interpretable \emph{angle score} $\theta(z)\in[0,\pi/2]$ for a sample $z$, quantifying whether $z$ is explained relatively more by $A$, more by $B$, or comparably by both. The primary role of $\theta(z)$ is as a \emph{per-sample geometric diagnostic}.  We illustrate the behavior of the score on MNIST through angle distributions and representative GSVD directions. A binary classifier derived from $\theta(z)$ is presented as an illustrative application of the score as an interpretable diagnostic tool. },
+    openreview = {oWI47rsoDi},
+    software   = {https://github.com/eduardamarks1/GSVD},
+}
+
+@InProceedings{maruyama26,
+    pages      = {398-415},
+    title      = {Categorical Trace Loop Networks for Gauge-Randomized Holonomy Regression},
+    author     = {Maruyama, Yoshihiro},
+    abstract   = {Gauge ambiguity is a pervasive obstacle when learning from group-valued transport data: edge measurements depend on arbitrary local coordinate choices, while the quantities we care about are gauge-invariant. Inspired by lattice gauge theory, where meaningful observables are built from loop holonomies rather than individual edge variables, we study a {SO(3)} learning problem on a discrete torus with random vertex-wise gauges. We adopt a categorical viewpoint in which an edge connection defines holonomy functorially on edge-paths of the 1-skeleton; in the flat/noiseless regime, this holonomy descends to the fundamental groupoid of the torus cell complex. Gauge transformations act as natural isomorphisms. This viewpoint leads us to {Categorical Trace Loop Networks} ({CTLN}): a novel architecture that learns from loop- and face-based gauge invariants obtained by functorial holonomy composition and trace/angle scalarization. On gauge-randomized torus holonomy regression, {CTLN} achieves a test {MAE} of 0.1747, while a standard message passing network and a spectral connection-{Laplacian} baseline both remain near 0.81 {MAE}. These results show that in gauge-dominated regimes, learning on categorical invariants capturing global topology and higher-order consistency provides a highly effective method.},
+    openreview = {pH1KuDsEIL},
+}
+
+@InProceedings{melnyk26,
+    pages      = {416-432},
+    title      = {E$(n)$-{E}quivariant {S}pherical {D}ecision {S}urfaces},
+    author     = {Melnyk, Pavlo and Felsberg, Michael and Daniilidis, Kostas},
+    abstract   = {We present a constructive derivation of exactly E(n)-equivariant spherical decision surfaces by extending prior O(n)-equivariant hypersphere neurons to include translations. To achieve this, we present a decomposition of the features of the O(n)-equivariant neurons and provide explicit representations for translation and E(n)-transformations to fulfil the respective equivariance constraints. The resulting decision surfaces are exactly E(n)-equivariant without input centring or explicit pairwise differences, and admit explicit closed-form matrix representations. In addition, we numerically verify the correctness of the derivations and perform a downstream check of the resulting geometric primitives.},
+    openreview = {Zx1Xvvflb5},
+    software   = {https://github.com/pavlo-melnyk/equivariant-hyperspheres/tree/main/notebooks/en_equiv_spherical_decision_surfaces},
+}
+
+
+@InProceedings{miquel-oliver26,
+    pages      = {433-455},
+    title      = {{E}ffective {R}esistance {R}ewiring: {A} {S}imple {T}opological {C}orrection for {O}ver-{S}quashing},
+    author     = {Miquel-Oliver, Bertran and Gil-Sorribes, Manel and Guallar, Victor and Molina, Alexis},
+    abstract   = {Graph Neural Networks (GNNs) struggle to capture long-range dependencies due to over-squashing, where information from exponentially growing neighborhoods must pass through a small number of structural bottlenecks. While recent rewiring methods attempt to alleviate this limitation, many rely on local criteria such as curvature, which can overlook global connectivity bottlenecks that restrict information flow. We introduce Effective Resistance Rewiring (ERR), a simple topology correction strategy that uses effective resistance as a global signal to detect structural bottlenecks. ERR iteratively adds edges between node pairs with the largest resistance while removing edges with minimal resistance, strengthening weak communication pathways while controlling graph densification through a fixed edge budget. The procedure is parameter-free beyond the rewiring budget and relies on a single global measure aggregating all paths between node pairs. Beyond evaluating predictive performance on GCN model, we analyze how rewiring affects message propagation. By studying cosine similarity between node embeddings across layers, we study how the relationship between initial node features and learned representations evolves during message passing, comparing graphs with and without rewiring. his analysis helps determine whether performance gains arise from improved long-range communication. Experiments on homophilic (Cora, CiteSeer) and heterophilic (Cornell, Texas) graphs, including directed settings with DirGCN, reveal a fundamental trade-off between over-squashing and oversmoothing, losing representation diversity across layers. Resistance-guided rewiring improves connectivity and signal propagation but can accelerate representation mixing in deep models. Combining ERR with normalization techniques (e.g., PairNorm) stabilizes this trade-off and improves performance, particularly in heterophilic settings.},
+    openreview = {thOIyY7WfW},
+}
+
+
+@InProceedings{montagna26,
+    pages      = {456-474},
+    title      = {Lift me up: the impact of liftings on hypergraph neural networks},
+    author     = {Montagna, Marco and Scardapane, Simone and Telyatnikov, Lev},
+    abstract   = {Hypergraph neural networks (HNNs) have become a powerful tool for modeling higher-order interactions in relational data. However, most HNN methods assume that the hypergraph structure is given. Whenever the data originates from a graph or a point cloud (which is common in practice) this requires a transformation step known as \textit{lifting}. Despite its crucial role, the lifting process remains largely understudied and is often handled via ad hoc heuristics. In this work, we present the first systematic evaluation of hypergraph lifting strategies. We study seven diverse lifting methods and assess their impact on downstream classification tasks across a variety of datasets and three state-of-the-art hypergraph models. Moreover, we compare these lifting-based approaches against standard graph neural networks, demonstrating that finding the appropriate higher-order structure allows hypergraph models to outperform traditional graph baselines. Notably, our findings reveal that the choice of lifting often has a greater impact on performance than the choice of model architecture. While some liftings perform better than others, no single lifting consistently dominates on all datasets. These results suggest that further advances in hypergraph learning may come less from architectural innovations and more from better ways of constructing hypergraph structures.},
+    openreview = {uwT8CbsD5J},
+    software   = {https://github.com/geometric-intelligence/TopoBench/tree/main},
+}
+
+
+@InProceedings{shastry26,
+    pages      = {475-488},
+    title      = {Tensor-SAE: Structured Sparse Autoencoders for Interpretable and Efficient Image Representations},
+    author     = {Ajay Shastry, Tanush and Batra, Soham and Patel, Laksh and Lala, Aarav and Bae, Andrew and Karuturi, Siddarth and Shah, Mithil and N Shanbhag, Neel},
+    abstract   = {We introduce Tensor-SAE, a structured sparse autoencoder that decodes through a learned bank of rank-1 tensor atoms (color $\times$ height $\times$ width). By factorizing the decoder into separable color and spatial factors and applying a light sparsity prior on latent activations, Tensor-SAE induces compact, interpretable representations that enable linear, spatially localized, and semantically meaningful interventions in image reconstructions. Unlike unconstrained dense or convolutional decoders that distribute information diffusely, Tensor-SAE enforces a strong inductive bias that trades some raw pixel-level fidelity for computational efficiency, interpretability, and controllability. We evaluate Tensor-SAE on CIFAR-10 against two baselines (a parameter-matched Dense-SAE and a ConvAE scaled to match parameter budgets). Our empirical suite (six figures) demonstrates that Tensor-SAE: (1) learns low-entropy spatial atoms and clean color factors; (2) yields linearly predictable intervention effects ($R^2 \approx 0.93$) enabling controllable color edits; (3) achieves superior reconstruction efficiency per FLOP and per parameter; (4) produces consistently sparse latents; and (5) stabilizes intervention strength during training. We discuss trade-offs, limitations, and the application of Tensor-SAE as a building block for interpretable, compute-efficient generative systems.},
+    year       = {2026},
+    openreview = {MmpRG8AuHY},
+}
+
+@InProceedings{shinde26,
+    pages      = {489-496},
+    title      = {Do Coresets, Pruning, and Quantization Preserve Neural Network Representations?},
+    author     = {Shinde, Tushar and Sharma, Avinash Kumar},
+    abstract   = {Neural network compression techniques, such as coreset selection, pruning, and quantization, enable efficient deployment but often induce representational changes that traditional accuracy metrics fail to capture. We propose Representation Similarity (REPS), a multi-faceted diagnostic metric that unifies effective rank, neuron aliveness, class separation, and eigenvalue decay similarity into a single interpretable score, providing comprehensive evaluation of compression- induced representational degradation. Experiments on CIFAR-10 with ResNet-18 demonstrate that REPS correlates strongly with accuracy drops (Pearson r =0.988), substantially outperforming conventional baselines such as weight similarity (r = 0.141) and prediction agreement. We further provide a sensitivity analysis of REPS component weights and layer-wise analysis revealing dimensional collapse, neuron death, and class separation degradation, offering interpretable insights into representational integrity under compression. These results position REPS as a robust, lightweight diagnostic tool for guiding compression-aware model design and adaptive deployment in resource-constrained environments.},
+    openreview = {SWQestQ3gj}
+}
+
+@InProceedings{skenderi26,
+    pages      = {497-518},
+    title      = {A Geometric Perspective on the Difficulties of Learning GNN-based SAT Solvers},
+    author     = {Skenderi, Geri},
+    abstract   = {Graph Neural Networks (GNNs) have gathered increasing interest as learnable solvers of Boolean Satisfiability Problems (SATs), operating on graph representations of logical formulas. However, their performance degrades sharply on harder and more constrained instances, raising questions about architectural limitations. In this paper, we work towards a geometric explanation built upon graph Ricci Curvature (RC). We prove that bipartite graphs derived from random k-SAT formulas are inherently negatively curved, and that this curvature decreases with instance difficulty. Given that negative graph RC indicates local connectivity bottlenecks, we argue that GNN solvers are affected by oversquashing, a phenomenon where long-range dependencies become impossible to compress into fixed-length representations. We validate our claims empirically across different SAT benchmarks and confirm that curvature is both a strong indicator of problem complexity and can be used to predict generalization error. Finally, we connect our findings to the design of existing solvers and outline promising directions for future work.},
+    openreview = {bqZouuTddt}
+}
+
+@InProceedings{wei26,
+    pages      = {519-532},
+    title      = {CLERF: Contrastive LEaRning for Full-Range Head Pose Estimation},
+    author     = {Wei, Ting-Ruen and Hu, Huei-Chung and Liu, Haowei and Wu, Xuyang and Fang, Yi and Wu, Hsin-Tai},
+    abstract   = {We propose a novel framework for representation learning in head pose estimation (HPE) that overcomes the challenges posed by sparse head pose data, which previously made triplet sampling infeasible. Leveraging recent advances in 3D-aware generative adversarial networks (3D GANs), we generate anchor--positive--negative triplets and perform contrastive learning on extensively augmented data, including geometric transformations. This enables the network to learn robust, geometry-aware representations that improve HPE accuracy. We observe that existing HPE models struggle when test images are slightly rotated or flipped, while our method maintains strong performance. Experiments show that our framework matches state-of-the-art models on standard test sets and outperforms them on augmented and full-range poses. Our model handles full-range HPE, accurately predicting head poses across the entire rotation spectrum, including upside-down orientations, and outperforms existing full-yaw range methods.},
+    openreview = {ldXh4ipYHm},
+}
+
+@InProceedings{suk26,
+  pages    = {533-602},
+  title    = {The {GRaM} 2026 Competition and {Warped-IFW} Dataset},
+  author   = {Suk, Julian and Seegoolam, Gavin and Pouplin, Alison and Tiwald, Paul and Bioli, Ivan and Bonde, Vedant and Bourgerie, R{\'e}mi and Breiner, Oscar and Capelle, Thomas and Chen, Huaguan and Colagrande, Alex and Davuluri, Aakashnag and Edula, Vinay and Edula, Vivekananda and Einberger, Bernhard and Ghiotto, Massimiliano and Greco, Francesca Maria and Grover, Ankit and Hodges, Justin and Ifaistos, Theofanis and Julka, Sahib and Kalaydjian, Anthony and Kocbay, Samet and Kotha, Aakash and Leutschafft, Maximilian and Lin, Ning and McGuire, Morgan and Medvedev, Vlad and Mendibe, Mikel and Ravipati, Deepthi and Sarrato-Al{\'o}s, Jorge and Singh, Harshit and Singh, Rajeev Kumar and Stiller, Joshua and Tiwari, Vihan and Viswanathan, S. and Walter, Luis J. and Zhang, Andy},
+  year     = {2026},
+  abstract = {Computational fluid dynamics is central to aerodynamic design. Yet, simulating transient and potentially turbulent flow around a new geometry is very expensive. There are increasing efforts to use machine learning models to reduce the cost of simulation. Given the growing use of geometric inductive biases in machine learning, we wanted to know whether architectural choices meaningfully affect results, and whether a competitive geometric solution could emerge. We turned this question into a competition hosted at the GRaM workshop. With BeyondMath, we release Warped-IFW -- 181 warped variants of the Imperial Front Wing under detached-eddy flow -- and pose one task: given an initial velocity window, predict its continuation. Out of 22 submissions, the top five are all voxel-based. In a post-competition analysis, we find that what actually lowers the error is spatial resolution, not parameter count or architecture family: graph and latent models converge to a plateau that only a finer grid breaks through. Additional details regarding the competition can be found on the competition website.},
+}

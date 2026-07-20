@@ -1,0 +1,118 @@
+---
+booktitle: 'Proceedings of GRaM: the Second Edition of the Workshop on Geometry-grounded
+  Representation Learning and Generative Modeling'
+shortname: GRaM Workshop
+volume: '326'
+year: '2026'
+start: &1 2026-04-26
+end: 2026-04-26
+published: 2026-07-20
+conference_number: '2'
+layout: proceedings
+series: Proceedings of Machine Learning Research
+publisher: PMLR
+issn: 2640-3498
+id: gram26
+month: 0
+cycles: false
+bibtex_editor: Pouplin, Alison and Vadgama, Sharvaree and Bekkers, Erik and Kaba,
+  S\'ekou-Oumar and Lawrence, Hannah and Lecha, Manuel and Baker, Elizabeth and Suk,
+  Julian and Walters, Robin and Tomczak, Jakub and Jegelka, Stefanie
+editor:
+- given: Alison
+  family: Pouplin
+- given: Sharvaree
+  family: Vadgama
+- given: Erik
+  family: Bekkers
+- given: Sékou-Oumar
+  family: Kaba
+- given: Hannah
+  family: Lawrence
+- given: Manuel
+  family: Lecha
+- given: Elizabeth
+  family: Baker
+- given: Julian
+  family: Suk
+- given: Robin
+  family: Walters
+- given: Jakub
+  family: Tomczak
+- given: Stefanie
+  family: Jegelka
+title: Proceedings of Machine Learning Research
+description: |
+  Proceedings of GRaM: the Second Edition of the Workshop on Geometry-grounded Representation Learning and Generative Modeling
+    Held in Riocentro Convention and Event Center, Rio de Janeiro, Brazil on 26 April 2026
+
+  Published as Volume 326 by the Proceedings of Machine Learning Research on 20 July 2026.
+
+  Volume Edited by:
+    Alison Pouplin
+    Sharvaree Vadgama
+    Erik Bekkers
+    Sékou-Oumar Kaba
+    Hannah Lawrence
+    Manuel Lecha
+    Elizabeth Baker
+    Julian Suk
+    Robin Walters
+    Jakub Tomczak
+    Stefanie Jegelka
+
+  Series Editors:
+    Neil D. Lawrence
+date_str: 26 Apr
+url: https://proceedings.mlr.press
+author:
+  name: PMLR
+baseurl: "/v326"
+twitter_username: MLResearchPress
+github_username: mlresearch
+markdown: kramdown
+exclude:
+- README.md
+- Gemfile
+- ".gitignore"
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-remote-theme
+remote_theme: mlresearch/jekyll-theme
+style: pmlr
+permalink: "/:title.html"
+ghub:
+  edit: true
+  repository: v326
+display:
+  copy_button:
+    bibtex: true
+    endnote: true
+    apa: true
+  comments: false
+volume_type: Volume
+volume_dir: v326
+email: ''
+conference:
+  name: Geometry-grounded Representation Learning and Generative Modeling Workshop
+    (GRaM) at ICLR 2026
+  url: https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM
+  location: Riocentro Convention and Event Center, Rio de Janeiro, Brazil
+  dates:
+  - *1
+analytics:
+  google:
+    tracking_id: UA-92432422-1
+link_visibility:
+  openreview: true
+  pdf: true
+  supplementary: true
+  software: true
+  video: true
+  arxiv: true
+  doi: true
+  website: true
+orig_bibfile: gram26_clean.bib
+# Site settings
+# Original source:  gram26_clean.bib
