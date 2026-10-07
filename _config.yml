@@ -4,7 +4,7 @@ booktitle: 'Proceedings of GRaM: the Second Edition of the Workshop on Geometry-
 shortname: GRaM Workshop
 volume: '326'
 year: '2026'
-start: &1 2026-04-26
+start: 2026-04-26
 end: 2026-04-26
 published: 2026-07-20
 conference_number: '2'
@@ -100,7 +100,7 @@ conference:
   url: https://openreview.net/group?id=ICLR.cc/2026/Workshop/GRaM
   location: Riocentro Convention and Event Center, Rio de Janeiro, Brazil
   dates:
-  - *1
+  - 2026-04-26
 analytics:
   google:
     tracking_id: UA-92432422-1
